@@ -672,3 +672,120 @@ body {
     }
 
 }
+
+/* =========================
+   HEADER NAVIGATION
+========================= */
+
+.top-nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 36px;
+}
+
+.brand {
+    color: #fff;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    color: #dbe4ff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+/* 방문한 링크도 색상 유지 */
+
+.nav-menu a:visited,
+.brand:visited {
+    color: #dbe4ff;
+}
+
+.brand:visited {
+    color: #fff;
+}
+
+
+/* Hover */
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+
+/* 밑줄 효과 */
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #fff;
+
+    transition:
+        width 0.2s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero 본문 */
+
+.hero-content {
+    padding-top: 10px;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 760px) {
+
+    .top-nav {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+}
+
+.footer-links a:visited {
+    color: #d0d5dd;
+}
