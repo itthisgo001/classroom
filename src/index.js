@@ -222,14 +222,19 @@ export default {
 
     if (!password) {
 
-      return new Response(
-        "Password secret is not configured.",
+    return new Response(
+        unavailablePage(course),
         {
-          status: 500
-        }
-      );
+            status: 200,
 
-    }
+            headers: {
+                "Content-Type":
+                    "text/html; charset=UTF-8"
+            }
+        }
+    );
+
+}
 
     // 이미 인증된 경우
     if (
@@ -332,3 +337,167 @@ export default {
   }
 
 };
+
+// 에러 페이지
+function unavailablePage(course) {
+    return `
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>수업 자료 준비 중</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family:
+                Pretendard,
+                "Noto Sans KR",
+                "Malgun Gothic",
+                sans-serif;
+
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        .box {
+            width: min(
+                460px,
+                calc(100% - 32px)
+            );
+
+            padding: 40px;
+
+            background: #fff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 18px 45px
+                rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+        }
+
+        .icon {
+            width: 72px;
+            height: 72px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: #eef2ff;
+
+            font-size: 34px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+
+            font-size: 26px;
+        }
+
+        p {
+            margin: 0;
+
+            color: #667085;
+
+            line-height: 1.7;
+        }
+
+        .course {
+            margin-top: 20px;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            background: #f5f7fb;
+
+            color: #3457d5;
+
+            font-weight: 700;
+        }
+
+        a {
+            display: inline-block;
+
+            margin-top: 28px;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            background: #3457d5;
+
+            color: #fff;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #2848bc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="box">
+
+        <div class="icon">
+            📚
+        </div>
+
+        <h1>
+            수업 자료 준비 중입니다
+        </h1>
+
+        <p>
+            현재 이 과정의 자료는
+            아직 공개되지 않았습니다.
+        </p>
+
+        <p>
+            수업 진행 시 다시 접속해주세요.
+        </p>
+
+        <div class="course">
+            ${course}
+        </div>
+
+        <a href="/">
+            ← 전체 자료실로 돌아가기
+        </a>
+
+    </main>
+
+</body>
+</html>
+`;
+}
