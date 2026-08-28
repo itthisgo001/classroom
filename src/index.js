@@ -1,7 +1,5 @@
 const PROTECTED = {
   "/aws": "AWS_PASSWORD",
-  "/security": "SECURITY_PASSWORD",
-  "/kubernetes": "K8S_PASSWORD",
 };
 
 function getCourse(pathname) {
