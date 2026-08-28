@@ -1,5 +1,13 @@
+/* =========================
+   RESET / BASE
+========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,206 +17,158 @@ body {
         "Noto Sans KR",
         "Malgun Gothic",
         sans-serif;
-
     background: #f5f7fb;
     color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
 }
 
 .wrap {
     width: min(1080px, calc(100% - 32px));
-    margin: auto;
+    margin: 0 auto;
 }
 
 
 /* =========================
-   HERO
+   HERO / HEADER
 ========================= */
 
 .hero {
-    padding: 80px 0;
-
+    padding: 42px 0 76px;
     background:
         linear-gradient(
             135deg,
             #172554,
             #3457d5
         );
-
     color: #fff;
 }
 
 .hero.small {
-    padding: 55px 0;
+    padding: 36px 0 52px;
+}
+
+.hero-content {
+    padding-top: 12px;
 }
 
 .eyebrow {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    font-weight: 800;
-
+    margin: 0 0 8px;
     color: #cbd5ff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.eyebrow.dark {
+    color: #3457d5;
 }
 
 .hero h1 {
     margin: 0.2em 0;
-
-    font-size:
-        clamp(
-            2rem,
-            6vw,
-            3.8rem
-        );
+    font-size: clamp(2rem, 6vw, 3.8rem);
+    line-height: 1.15;
 }
 
 .hero p {
     color: #e6ebff;
 }
 
-.back {
-    color: white;
+.back,
+.back:visited {
+    color: #fff;
     text-decoration: none;
 }
 
 
 /* =========================
-   GRID / CARD
+   TOP NAVIGATION
 ========================= */
 
-.grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-
-    padding: 50px 0;
-}
-
-.card {
-    display: block;
-
-    padding: 28px;
-
-    background: #fff;
-
-    border:
-        1px solid #e5e7eb;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 0, 0, 0.05);
-
-    color: inherit;
-    text-decoration: none;
-}
-
-.card span {
-    font-size: 2rem;
-}
-
-.card p {
-    color: #667085;
-}
-
-
-/* =========================
-   LIST
-========================= */
-
-.list {
-    padding: 45px 0;
-}
-
-.list a {
+.top-nav {
     display: flex;
-
-    gap: 18px;
-
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 34px;
+}
 
-    margin-bottom: 12px;
-
-    padding: 20px 22px;
-
-    background: #fff;
-
-    border:
-        1px solid #e5e7eb;
-
-    border-radius: 14px;
-
-    color: #172033;
+.brand,
+.brand:visited {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
     text-decoration: none;
 }
 
-.list b {
-    color: #3457d5;
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-
-/* =========================
-   LOGIN
-========================= */
-
-.login {
-    min-height: 100vh;
-
-    display: grid;
-    place-items: center;
-
-    background: #f5f7fb;
+.nav-menu a,
+.nav-menu a:visited {
+    position: relative;
+    color: #dbe4ff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.login-box {
-    width:
-        min(
-            420px,
-            calc(100% - 32px)
-        );
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #fff;
+}
 
-    padding: 32px;
-
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
     background: #fff;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 18px 45px
-        rgba(0, 0, 0, 0.1);
+    transition: width 0.2s ease;
 }
 
-.login-box input {
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
     width: 100%;
-
-    padding: 14px;
-
-    margin: 12px 0;
-
-    border:
-        1px solid #d0d5dd;
-
-    border-radius: 10px;
 }
 
-.login-box button {
-    width: 100%;
 
-    padding: 14px;
+/* YouTube 페이지의 외부 채널 링크 */
 
-    border: 0;
-    border-radius: 10px;
-
-    background: #3457d5;
-    color: white;
-
-    font-weight: 800;
+.hero-channel-link,
+.hero-channel-link:visited {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #eef2ff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.error {
-    color: #b42318;
+.hero-channel-link:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    transform: translateY(-1px);
 }
 
 
@@ -226,83 +186,207 @@ body {
 
 .section-title h2 {
     margin: 4px 0 8px;
-
     font-size: 30px;
 }
 
 .section-title > p:last-child {
     margin: 0;
-
     color: #667085;
 }
 
-.eyebrow.dark {
+
+/* =========================
+   COURSE GRID / CARD
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 22px 0 50px;
+}
+
+.card {
+    display: block;
+    min-width: 0;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    color: inherit;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.card:visited {
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #d7ddea;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.card h2 {
+    margin: 16px 0 8px;
+    font-size: 21px;
+}
+
+.card p {
+    margin: 0;
+    color: #667085;
+}
+
+
+/* =========================
+   COURSE LIST PAGE
+========================= */
+
+.list {
+    padding: 45px 0;
+}
+
+.list a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+    padding: 20px 22px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    color: #172033;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.list a:visited {
+    color: #172033;
+}
+
+.list a:hover {
+    transform: translateY(-2px);
+    border-color: #d7ddea;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.list b {
     color: #3457d5;
 }
 
 
 /* =========================
-   YOUTUBE
+   LOGIN
 ========================= */
 
-.youtube-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+.login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #f5f7fb;
+}
+
+.login-box {
+    width: min(420px, calc(100% - 32px));
+    padding: 32px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h1 {
+    margin-top: 0;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 10px;
+    background: #3457d5;
+    color: #fff;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #2948bc;
+}
+
+.error {
+    color: #b42318;
 }
 
 
-/* YouTube 카드 */
+/* =========================
+   YOUTUBE PLAYLIST PAGE
+========================= */
 
-.youtube-card {
-    padding: 0;
+.youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding-bottom: 50px;
+}
 
+.youtube-playlist-card {
+    min-width: 0;
     overflow: hidden;
-}
-
-
-/* 썸네일 영역 */
-
-.youtube-thumbnail {
-    height: 160px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #151515,
-            #333
-        );
-}
-
-
-/* 재생 버튼 */
-
-.youtube-play {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 64px;
-    height: 48px;
-
-    border-radius: 12px;
-
-    background: #ff0000;
-    color: white;
-
-    font-size: 22px;
-
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     transition:
-        transform 0.2s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.youtube-card:hover .youtube-play {
-    transform: scale(1.1);
+.youtube-playlist-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 16:9 영상 */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 
@@ -312,72 +396,25 @@ body {
     padding: 24px;
 }
 
-
-/* 카테고리 */
-
 .youtube-category {
     display: inline-block;
-
     margin-bottom: 8px;
-
     color: #3457d5;
-
     font-size: 12px;
     font-weight: 800;
-
     letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
-
-
-/* 제목 */
 
 .youtube-content h2 {
     margin: 4px 0 8px;
-
     font-size: 20px;
+    line-height: 1.4;
 }
-
-
-/* 설명 */
 
 .youtube-content p {
     margin: 0;
-
     color: #667085;
-}
-
-
-/* 채널 바로가기 */
-
-.youtube-more {
-    margin-top: 32px;
-
-    text-align: center;
-}
-
-.youtube-button {
-    display: inline-block;
-
-    padding: 14px 22px;
-
-    border-radius: 10px;
-
-    background: #ff0000;
-    color: white;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.youtube-button:hover {
-    transform: translateY(-2px);
-
-    opacity: 0.9;
 }
 
 
@@ -387,19 +424,15 @@ body {
 
 .footer {
     margin-top: 80px;
-
     padding: 45px 0 25px;
-
     background: #111827;
-    color: white;
+    color: #fff;
 }
 
 .footer-inner {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
-
+    justify-content: space-between;
     gap: 30px;
 }
 
@@ -409,57 +442,51 @@ body {
 
 .footer-brand p {
     margin: 6px 0 0;
-
     color: #98a2b3;
-
     font-size: 14px;
 }
-
-
-/* Footer 링크 */
 
 .footer-links {
     display: flex;
-
+    flex-wrap: wrap;
     gap: 24px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links a:visited {
     color: #d0d5dd;
-
-    text-decoration: none;
-
     font-size: 14px;
+    text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #fff;
 }
-
-
-/* Copyright */
 
 .footer-bottom {
     margin-top: 35px;
-
     padding-top: 20px;
-
-    border-top:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.1
-        );
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
     margin: 0;
-
     color: #667085;
-
     font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .grid,
+    .youtube-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
 }
 
 
@@ -469,323 +496,62 @@ body {
 
 @media (max-width: 760px) {
 
-    .grid {
-        grid-template-columns: 1fr;
+    .wrap {
+        width: min(100% - 24px, 1080px);
     }
 
     .hero {
-        padding: 55px 0;
+        padding: 30px 0 52px;
+    }
+
+    .hero.small {
+        padding: 28px 0 42px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-bottom: 26px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .section {
         padding-top: 45px;
     }
 
-    .youtube-section {
-        padding-top: 55px;
+    .grid,
+    .youtube-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        padding-top: 14px;
     }
 
     .footer-inner {
         flex-direction: column;
-
         align-items: flex-start;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-    }
 }
 
-.youtube-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 24px;
-}
-
-.youtube-playlist-card {
-    overflow: hidden;
-
-    background: #fff;
-
-    border:
-        1px solid #e5e7eb;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 0, 0, 0.05);
-}
-
-
-/* 16:9 영상 비율 */
-
-.video-wrapper {
-    position: relative;
-
-    width: 100%;
-
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-
-    background: #000;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-}
-
-
-/* 모바일 */
-
-@media (max-width: 900px) {
-
-    .youtube-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-}
-
-@media (max-width: 760px) {
-
-    .youtube-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-}
 
 /* =========================
-   YOUTUBE PLAYLIST GRID
+   ACCESSIBILITY
 ========================= */
 
-.youtube-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
+@media (prefers-reduced-motion: reduce) {
 
-.youtube-playlist-card {
-    overflow: hidden;
-
-    background: #fff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 0, 0, 0.05);
-}
-
-
-/* 16:9 영상 비율 */
-
-.video-wrapper {
-    position: relative;
-
-    width: 100%;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-
-    background: #000;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-}
-
-
-/* 영상 정보 */
-
-.youtube-content {
-    padding: 24px;
-}
-
-.youtube-category {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: #3457d5;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-}
-
-.youtube-content h2 {
-    margin: 4px 0 8px;
-
-    font-size: 20px;
-}
-
-.youtube-content p {
-    margin: 0;
-
-    color: #667085;
-}
-
-
-/* 태블릿 */
-
-@media (max-width: 900px) {
-
-    .youtube-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
     }
 
-}
-
-
-/* 모바일 */
-
-@media (max-width: 760px) {
-
-    .youtube-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-}
-
-/* =========================
-   HEADER NAVIGATION
-========================= */
-
-.top-nav {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding-bottom: 36px;
-}
-
-.brand {
-    color: #fff;
-
-    font-size: 20px;
-    font-weight: 800;
-
-    text-decoration: none;
-}
-
-.nav-menu {
-    display: flex;
-
-    align-items: center;
-
-    gap: 28px;
-}
-
-.nav-menu a {
-    position: relative;
-
-    color: #dbe4ff;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    text-decoration: none;
-
-    transition:
-        color 0.2s ease;
-}
-
-
-/* 방문한 링크도 색상 유지 */
-
-.nav-menu a:visited,
-.brand:visited {
-    color: #dbe4ff;
-}
-
-.brand:visited {
-    color: #fff;
-}
-
-
-/* Hover */
-
-.nav-menu a:hover {
-    color: #fff;
-}
-
-
-/* 밑줄 효과 */
-
-.nav-menu a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 2px;
-
-    background: #fff;
-
-    transition:
-        width 0.2s ease;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-
-/* Hero 본문 */
-
-.hero-content {
-    padding-top: 10px;
-}
-
-
-/* 모바일 */
-
-@media (max-width: 760px) {
-
-    .top-nav {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 18px;
-    }
-
-    .nav-menu {
-        gap: 20px;
-    }
-
-}
-
-.footer-links a:visited {
-    color: #d0d5dd;
 }
