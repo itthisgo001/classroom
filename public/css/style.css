@@ -1,23 +1,94 @@
-/* =========================
-   YOUTUBE
-========================= */
-
-.youtube-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+* {
+    box-sizing: border-box;
 }
 
-.youtube-grid {
+body {
+    margin: 0;
+    font-family:
+        Pretendard,
+        "Noto Sans KR",
+        "Malgun Gothic",
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.wrap {
+    width: min(1080px, calc(100% - 32px));
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 80px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #3457d5
+        );
+
+    color: #fff;
+}
+
+.hero.small {
+    padding: 55px 0;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+
+    color: #cbd5ff;
+}
+
+.hero h1 {
+    margin: 0.2em 0;
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            3.8rem
+        );
+}
+
+.hero p {
+    color: #e6ebff;
+}
+
+.back {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =========================
+   GRID / CARD
+========================= */
+
+.grid {
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 24px;
+    gap: 20px;
+
+    padding: 50px 0;
 }
 
-.youtube-playlist-card {
-    overflow: hidden;
+.card {
+    display: block;
+
+    padding: 28px;
 
     background: #fff;
 
@@ -29,32 +100,209 @@
     box-shadow:
         0 10px 25px
         rgba(0, 0, 0, 0.05);
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.card span {
+    font-size: 2rem;
+}
+
+.card p {
+    color: #667085;
 }
 
 
-/* 16:9 영상 */
+/* =========================
+   LIST
+========================= */
 
-.video-wrapper {
-    position: relative;
-
-    width: 100%;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-
-    background: #000;
+.list {
+    padding: 45px 0;
 }
 
-.video-wrapper iframe {
-    position: absolute;
+.list a {
+    display: flex;
 
-    top: 0;
-    left: 0;
+    gap: 18px;
 
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    padding: 20px 22px;
+
+    background: #fff;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    color: #172033;
+    text-decoration: none;
+}
+
+.list b {
+    color: #3457d5;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login {
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    background: #f5f7fb;
+}
+
+.login-box {
+    width:
+        min(
+            420px,
+            calc(100% - 32px)
+        );
+
+    padding: 32px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.1);
+}
+
+.login-box input {
     width: 100%;
-    height: 100%;
+
+    padding: 14px;
+
+    margin: 12px 0;
+
+    border:
+        1px solid #d0d5dd;
+
+    border-radius: 10px;
+}
+
+.login-box button {
+    width: 100%;
+
+    padding: 14px;
 
     border: 0;
+    border-radius: 10px;
+
+    background: #3457d5;
+    color: white;
+
+    font-weight: 800;
+}
+
+.error {
+    color: #b42318;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 60px 0 20px;
+}
+
+.section-title {
+    margin-bottom: 28px;
+}
+
+.section-title h2 {
+    margin: 4px 0 8px;
+
+    font-size: 30px;
+}
+
+.section-title > p:last-child {
+    margin: 0;
+
+    color: #667085;
+}
+
+.eyebrow.dark {
+    color: #3457d5;
+}
+
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.youtube-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* YouTube 카드 */
+
+.youtube-card {
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+/* 썸네일 영역 */
+
+.youtube-thumbnail {
+    height: 160px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #333
+        );
+}
+
+
+/* 재생 버튼 */
+
+.youtube-play {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #ff0000;
+    color: white;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.youtube-card:hover .youtube-play {
+    transform: scale(1.1);
 }
 
 
@@ -63,6 +311,9 @@
 .youtube-content {
     padding: 24px;
 }
+
+
+/* 카테고리 */
 
 .youtube-category {
     display: inline-block;
@@ -77,11 +328,17 @@
     letter-spacing: 0.1em;
 }
 
+
+/* 제목 */
+
 .youtube-content h2 {
     margin: 4px 0 8px;
 
     font-size: 20px;
 }
+
+
+/* 설명 */
 
 .youtube-content p {
     margin: 0;
@@ -121,6 +378,275 @@
     transform: translateY(-2px);
 
     opacity: 0.9;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 80px;
+
+    padding: 45px 0 25px;
+
+    background: #111827;
+    color: white;
+}
+
+.footer-inner {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-brand strong {
+    font-size: 20px;
+}
+
+.footer-brand p {
+    margin: 6px 0 0;
+
+    color: #98a2b3;
+
+    font-size: 14px;
+}
+
+
+/* Footer 링크 */
+
+.footer-links {
+    display: flex;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #d0d5dd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* Copyright */
+
+.footer-bottom {
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.1
+        );
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .section {
+        padding-top: 45px;
+    }
+
+    .youtube-section {
+        padding-top: 55px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+.youtube-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.youtube-playlist-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+/* 16:9 영상 비율 */
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 900px) {
+
+    .youtube-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .youtube-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+/* =========================
+   YOUTUBE PLAYLIST GRID
+========================= */
+
+.youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.youtube-playlist-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+/* 16:9 영상 비율 */
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* 영상 정보 */
+
+.youtube-content {
+    padding: 24px;
+}
+
+.youtube-category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #3457d5;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+.youtube-content h2 {
+    margin: 4px 0 8px;
+
+    font-size: 20px;
+}
+
+.youtube-content p {
+    margin: 0;
+
+    color: #667085;
 }
 
 
