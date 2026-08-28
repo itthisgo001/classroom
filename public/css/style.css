@@ -1121,3 +1121,11 @@ a {
 .resource-link + .list {
     padding-top: 20px;
 }
+
+.resource-link + .resource-link {
+    padding-top: 12px;
+}
+
+.resource-link + .list {
+    padding-top: 24px;
+}
