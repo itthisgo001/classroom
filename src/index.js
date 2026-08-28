@@ -3,6 +3,7 @@ const PROTECTED = {
   "/security": "SECURITY_PASSWORD",
   "/kubernetes": "K8S_PASSWORD",
   "/cyber": "CYBER_PASSWORD",
+  "/docker": "DOCKER_PASSWORD",
 };
 
 function getCourse(pathname) {
@@ -676,12 +677,8 @@ function notFoundPage(pathname) {
         </div>
 
         <h1>
-            아직 준비 중인 페이지입니다
+            준비 중인 페이지입니다
         </h1>
-
-        <p>
-            해당 과목 페이지는 아직 생성되지 않았습니다.
-        </p>
 
         <p>
             자료가 준비되면 순차적으로 공개됩니다.
