@@ -3,38 +3,317 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>IT 수업 자료실</title>
+
+    <title>IT핥기 LAB</title>
+
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
 </head>
+
 <body>
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <header class="hero">
         <div class="wrap">
-            <p class="eyebrow">CLASS RESOURCE HUB</p>
-            <h1>IT 수업 자료실</h1>
-            <p>과목을 선택하세요. 보호된 과목은 비밀번호 입력 후 접근할 수 있습니다.</p>
+
+            <p class="eyebrow">
+                CLASS RESOURCE HUB
+            </p>
+
+            <h1>IT 강의 자료실</h1>
+
+            <p>
+                과목을 선택하세요.
+                보호된 과목은 비밀번호 입력 후 접근할 수 있습니다.
+            </p>
+
         </div>
     </header>
+
+
     <main class="wrap">
-        <div class="grid">
-            <a class="card" href="/aws/">
-                <span>☁️</span>
-                <h2>AWS Cloud</h2>
-                <p>VPC, EC2, RDS, ALB, CloudFront</p>
-            </a>
-            <a class="card" href="/kubernetes/">
-                <span>🐳</span>
-                <h2>Kubernetes</h2>
-                <p>Docker, Kubernetes, GitOps</p>
-            </a>
-            <a class="card" href="/cyber/">
-                <span>🔐</span>
-                <h2>Cyber Security</h2>
-                <p>
-                    네트워크, 시스템, 웹,
-                    클라우드 보안
+
+        <!-- =========================
+             강의 자료
+        ========================== -->
+        <section class="section">
+
+            <div class="section-title">
+                <p class="eyebrow dark">
+                    CLASS MATERIALS
                 </p>
-            </a>
-        </div>
+
+                <h2>강의 자료</h2>
+
+                <p>
+                    수업 과목을 선택하면 해당 강의 자료실로 이동합니다.
+                </p>
+            </div>
+
+
+            <div class="grid">
+
+                <!-- AWS -->
+                <a class="card" href="/aws/">
+
+                    <span class="card-icon">
+                        ☁️
+                    </span>
+
+                    <h2>AWS Cloud</h2>
+
+                    <p>
+                        VPC, EC2, RDS, ALB,
+                        CloudFront
+                    </p>
+
+                </a>
+
+
+                <!-- Kubernetes -->
+                <a class="card" href="/kubernetes/">
+
+                    <span class="card-icon">
+                        🐳
+                    </span>
+
+                    <h2>Kubernetes</h2>
+
+                    <p>
+                        Docker, Kubernetes,
+                        GitOps
+                    </p>
+
+                </a>
+
+
+                <!-- Cyber Security -->
+                <a class="card" href="/cyber/">
+
+                    <span class="card-icon">
+                        🔐
+                    </span>
+
+                    <h2>Cyber Security</h2>
+
+                    <p>
+                        네트워크, 시스템, 웹,
+                        클라우드 보안
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             YouTube 강의
+        ========================== -->
+        <section class="section youtube-section">
+
+            <div class="section-title">
+
+                <p class="eyebrow dark">
+                    VIDEO LECTURES
+                </p>
+
+                <h2>YouTube 강의</h2>
+
+                <p>
+                    강의 복습과 추가 학습을 위한 영상 자료입니다.
+                </p>
+
+            </div>
+
+
+            <div class="grid youtube-grid">
+
+                <!-- 영상 1 -->
+                <a
+                    class="card youtube-card"
+                    href="https://www.youtube.com/@ithotgi"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="youtube-thumbnail">
+                        <span class="youtube-play">
+                            ▶
+                        </span>
+                    </div>
+
+                    <div class="youtube-content">
+
+                        <span class="youtube-category">
+                            NETWORK
+                        </span>
+
+                        <h2>
+                            네트워크 기초 강의
+                        </h2>
+
+                        <p>
+                            TCP/IP, 서브넷,
+                            라우팅 등 네트워크 기초 학습
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- 영상 2 -->
+                <a
+                    class="card youtube-card"
+                    href="https://www.youtube.com/@ithotgi"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="youtube-thumbnail">
+                        <span class="youtube-play">
+                            ▶
+                        </span>
+                    </div>
+
+                    <div class="youtube-content">
+
+                        <span class="youtube-category">
+                            CLOUD
+                        </span>
+
+                        <h2>
+                            AWS Cloud 강의
+                        </h2>
+
+                        <p>
+                            AWS 인프라 구성과
+                            클라우드 서비스 활용
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- 영상 3 -->
+                <a
+                    class="card youtube-card"
+                    href="https://www.youtube.com/@ithotgi"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <div class="youtube-thumbnail">
+                        <span class="youtube-play">
+                            ▶
+                        </span>
+                    </div>
+
+                    <div class="youtube-content">
+
+                        <span class="youtube-category">
+                            SECURITY
+                        </span>
+
+                        <h2>
+                            사이버보안 강의
+                        </h2>
+
+                        <p>
+                            시스템, 네트워크,
+                            웹 취약점 및 보안 실습
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- 채널 바로가기 -->
+            <div class="youtube-more">
+
+                <a
+                    href="https://www.youtube.com/@ithotgi"
+                    target="_blank"
+                    rel="noopener"
+                    class="youtube-button"
+                >
+                    ▶ IT핥기 YouTube 채널 바로가기
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="wrap footer-inner">
+
+            <div class="footer-brand">
+
+                <strong>
+                    IT핥기 LAB
+                </strong>
+
+                <p>
+                    IT · Cloud · Security Education
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@ithotgi"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    YouTube
+                </a>
+
+                <a
+                    href="https://github.com/itthisgo001"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="wrap footer-bottom">
+
+            <p>
+                © 2026 IT핥기 LAB.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
