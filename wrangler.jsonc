@@ -2,7 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
 
   "name": "classroom",
+
   "main": "src/index.js",
+
   "compatibility_date": "2026-08-28",
 
   "assets": {
@@ -11,11 +13,7 @@
     "run_worker_first": true
   },
 
-  "secrets": {
-    "required": [
-      "AWS_PASSWORD",
-      "SECURITY_PASSWORD",
-      "K8S_PASSWORD"
-    ]
+  "observability": {
+    "enabled": true
   }
 }
