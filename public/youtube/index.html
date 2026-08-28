@@ -2,55 +2,41 @@
 <html lang="ko">
 
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    <title>YouTube 강의 | IT핥기 LAB</title>
 
-    <title>
-        YouTube 강의 | IT핥기 LAB
-    </title>
-
-    <link
-        rel="stylesheet"
-        href="/css/style.css"
-    >
-
-    <link
-        rel="icon"
-        type="image/png"
-        href="/favicon.png"
-    >
-
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
 </head>
-
 
 <body>
 
+    <!-- =========================
+         HERO / HEADER
+    ========================== -->
     <header class="hero small">
 
         <div class="wrap">
 
             <div class="top-nav">
 
-                <a
-                    href="/"
-                    class="brand"
-                >
+                <a href="/" class="brand">
                     IT핥기 LAB
                 </a>
 
-
-                <nav class="nav-menu">
+                <nav class="nav-menu" aria-label="주요 메뉴">
 
                     <a href="/">
                         강의자료실
                     </a>
 
-                    <a href="/youtube/" class="active" aria-current="page">
+                    <a
+                        href="/youtube/"
+                        class="active"
+                        aria-current="page"
+                    >
                         YouTube 강의
                     </a>
 
@@ -90,6 +76,9 @@
     </header>
 
 
+    <!-- =========================
+         MAIN
+    ========================== -->
     <main class="wrap">
 
         <section class="section">
@@ -105,33 +94,80 @@
                 </h2>
 
                 <p>
-                    원하는 강의를 선택하여 학습하세요.
+                    분야별 재생목록에서 원하는 강의를 선택하여 학습하세요.
                 </p>
 
             </div>
 
 
-            <div class="youtube-grid">
-                    <!-- =========================
-                        Java
-                    ========================== -->
-                <article class="youtube-playlist-card">
+            <!-- 카테고리 바로가기 -->
+            <nav class="category-nav" aria-label="YouTube 강의 카테고리">
 
-                    <div class="video-wrapper">
+                <a href="#programming">
+                    💻 Programming
+                </a>
+
+                <a href="#data">
+                    📊 Data
+                </a>
+
+                <a href="#os">
+                    🐧 OS
+                </a>
+
+                <a href="#tools">
+                    🛠️ Tools
+                </a>
+
+            </nav>
+
+
+            <!-- =========================
+                 PROGRAMMING
+            ========================== -->
+            <section
+                id="programming"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        💻
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            PROGRAMMING
+                        </p>
+
+                        <h2>
+                            프로그래밍
+                        </h2>
+
+                        <p>
+                            프로그래밍 언어와 웹 애플리케이션 개발 강의입니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="youtube-grid">
+
+                    <!-- Java -->
+                    <article class="youtube-playlist-card">
+
+                        <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heRkx-B5U7w-_cO6PDw063dW"
-                                title="Java"
+                                title="Java 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -140,12 +176,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Programming
+                                JAVA
                             </span>
 
-                            <h2>
+                            <h3>
                                 자바 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 자바 개발 개념 및 코딩 문법
@@ -156,26 +192,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        Python
-                    ========================== -->
+                    <!-- Python -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heRclYB7FYI_WoXE2N-7zSl5"
-                                title="Python"
+                                title="Python 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -184,12 +211,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Programming
+                                PYTHON
                             </span>
 
-                            <h2>
+                            <h3>
                                 파이썬 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 파이썬 개발 개념 및 코딩 문법
@@ -200,70 +227,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        SQL
-                    ========================== -->
-                    <article class="youtube-playlist-card">
-
-                        <div class="video-wrapper">
-
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTPcMzb2pOwhKZUdSmlkOqC"
-                                title="SQL Oracle"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
-                                allowfullscreen>
-                            </iframe>
-
-                        </div>
-
-                        <div class="youtube-content">
-
-                            <span class="youtube-category">
-                                Data
-                            </span>
-
-                            <h2>
-                                SQL 강의
-                            </h2>
-
-                            <p>
-                                SQL 기초(Oracle)
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =========================
-                        JSP
-                    ========================== -->
+                    <!-- JSP -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heQmbi8MP9l7QAs64ZP_fzeF"
-                                title="JSP"
+                                title="JSP 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -272,12 +246,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Programming
+                                JSP
                             </span>
 
-                            <h2>
+                            <h3>
                                 JSP 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 JSP 개발 방법
@@ -288,26 +262,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        Java + DB + JSP
-                    ========================== -->
+                    <!-- Java + DB + JSP -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heQmbi8MP9l7QAs64ZP_fzeF"
-                                title="Java DB JSP"
+                                title="Java DB JSP 개념 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -316,12 +281,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Programming
+                                JAVA WEB
                             </span>
 
-                            <h2>
+                            <h3>
                                 Java + DB + JSP 개념 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 자바와 데이터베이스, JSP 연동 개념
@@ -332,26 +297,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        Django
-                    ========================== -->
+                    <!-- Django -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heQVO-5JnVMp1blZH3M0lo5Z"
-                                title="Django"
+                                title="Django 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -360,12 +316,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Programming
+                                DJANGO
                             </span>
 
-                            <h2>
+                            <h3>
                                 Django 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 Django 웹 애플리케이션 개발 방법
@@ -375,27 +331,57 @@
 
                     </article>
 
+                </div>
 
-                    <!-- =========================
-                        Linux
-                    ========================== -->
+            </section>
+
+
+            <!-- =========================
+                 DATA
+            ========================== -->
+            <section
+                id="data"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        📊
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            DATA
+                        </p>
+
+                        <h2>
+                            데이터
+                        </h2>
+
+                        <p>
+                            데이터베이스, 데이터 분석, 웹 데이터 수집 강의입니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="youtube-grid">
+
+                    <!-- SQL -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heSOSBrV_5acQC4XdkAMDPo-"
-                                title="Linux"
+                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTPcMzb2pOwhKZUdSmlkOqC"
+                                title="SQL Oracle 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -404,15 +390,15 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                OS
+                                DATABASE
                             </span>
 
-                            <h2>
-                                리눅스 기초 강의
-                            </h2>
+                            <h3>
+                                SQL 강의
+                            </h3>
 
                             <p>
-                                리눅스 기초 사용법
+                                SQL 기초(Oracle)
                             </p>
 
                         </div>
@@ -420,70 +406,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        Git
-                    ========================== -->
-                    <article class="youtube-playlist-card">
-
-                        <div class="video-wrapper">
-
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTVW8lrWo8DVLi33BRVwICo"
-                                title="Git"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
-                                allowfullscreen>
-                            </iframe>
-
-                        </div>
-
-                        <div class="youtube-content">
-
-                            <span class="youtube-category">
-                                Tools
-                            </span>
-
-                            <h2>
-                                Git 강의
-                            </h2>
-
-                            <p>
-                                Git 기본 개념과 필수 사용법
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =========================
-                        데이터 분석
-                    ========================== -->
+                    <!-- 데이터 분석 -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTSebtxqWcT6LnII8mQlkzD"
-                                title="Data Analysis"
+                                title="데이터 분석 도구 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -492,12 +425,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Data
+                                DATA ANALYSIS
                             </span>
 
-                            <h2>
+                            <h3>
                                 데이터 분석 도구 기초 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 데이터 분석을 위한 파이썬 도구 사용법
@@ -508,26 +441,17 @@
                     </article>
 
 
-                    <!-- =========================
-                        Web Crawling
-                    ========================== -->
+                    <!-- Web Crawling -->
                     <article class="youtube-playlist-card">
 
                         <div class="video-wrapper">
 
                             <iframe
                                 src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTmIJBXTWQVQNnhvNO1OXG2"
-                                title="Web Crawling"
+                                title="Web Crawling 강의 재생목록"
+                                loading="lazy"
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                allow="
-                                    accelerometer;
-                                    autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    gyroscope;
-                                    picture-in-picture;
-                                    web-share
-                                "
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
 
@@ -536,12 +460,12 @@
                         <div class="youtube-content">
 
                             <span class="youtube-category">
-                                Data
+                                CRAWLING
                             </span>
 
-                            <h2>
+                            <h3>
                                 Web Crawling 강의
-                            </h2>
+                            </h3>
 
                             <p>
                                 웹 크롤링 기초 강의
@@ -551,13 +475,164 @@
 
                     </article>
 
-            </div>
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 OS
+            ========================== -->
+            <section
+                id="os"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        🐧
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            OPERATING SYSTEM
+                        </p>
+
+                        <h2>
+                            운영체제
+                        </h2>
+
+                        <p>
+                            Linux 운영체제의 기초 사용법을 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="youtube-grid">
+
+                    <article class="youtube-playlist-card">
+
+                        <div class="video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heSOSBrV_5acQC4XdkAMDPo-"
+                                title="Linux 기초 강의 재생목록"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="youtube-content">
+
+                            <span class="youtube-category">
+                                LINUX
+                            </span>
+
+                            <h3>
+                                리눅스 기초 강의
+                            </h3>
+
+                            <p>
+                                리눅스 기초 사용법
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TOOLS
+            ========================== -->
+            <section
+                id="tools"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        🛠️
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            DEVELOPMENT TOOLS
+                        </p>
+
+                        <h2>
+                            개발 도구
+                        </h2>
+
+                        <p>
+                            개발과 협업 과정에서 사용하는 도구를 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="youtube-grid">
+
+                    <article class="youtube-playlist-card">
+
+                        <div class="video-wrapper">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/videoseries?list=PLpzDq-W37heTVW8lrWo8DVLi33BRVwICo"
+                                title="Git 강의 재생목록"
+                                loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="youtube-content">
+
+                            <span class="youtube-category">
+                                GIT
+                            </span>
+
+                            <h3>
+                                Git 강의
+                            </h3>
+
+                            <p>
+                                Git 기본 개념과 필수 사용법
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
 
         </section>
 
     </main>
 
 
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer class="footer">
 
         <div class="wrap footer-inner">
@@ -601,8 +676,7 @@
         <div class="wrap footer-bottom">
 
             <p>
-                © 2026 IT핥기 LAB.
-                All rights reserved.
+                © 2026 IT핥기 LAB. All rights reserved.
             </p>
 
         </div>

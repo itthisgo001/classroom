@@ -12,13 +12,16 @@ html {
 
 body {
     margin: 0;
+
     font-family:
         Pretendard,
         "Noto Sans KR",
         "Malgun Gothic",
         sans-serif;
+
     background: #f5f7fb;
     color: #172033;
+
     line-height: 1.6;
 }
 
@@ -38,12 +41,14 @@ a {
 
 .hero {
     padding: 42px 0 76px;
+
     background:
         linear-gradient(
             135deg,
             #172554,
             #3457d5
         );
+
     color: #fff;
 }
 
@@ -57,9 +62,12 @@ a {
 
 .eyebrow {
     margin: 0 0 8px;
+
     color: #cbd5ff;
+
     font-size: 0.8rem;
     font-weight: 800;
+
     letter-spacing: 0.15em;
 }
 
@@ -69,13 +77,27 @@ a {
 
 .hero h1 {
     margin: 0.2em 0;
-    font-size: clamp(2rem, 6vw, 3.8rem);
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            3.8rem
+        );
+
     line-height: 1.15;
 }
 
 .hero p {
+    max-width: 720px;
+
+    margin-bottom: 0;
+
     color: #e6ebff;
 }
+
+
+/* 상세 페이지에서 사용할 수 있는 뒤로가기 */
 
 .back,
 .back:visited {
@@ -90,34 +112,46 @@ a {
 
 .top-nav {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 24px;
+
     padding-bottom: 34px;
 }
 
 .brand,
 .brand:visited {
     color: #fff;
+
     font-size: 20px;
     font-weight: 800;
+
     text-decoration: none;
 }
 
 .nav-menu {
     display: flex;
+
     align-items: center;
+
     gap: 28px;
 }
 
 .nav-menu a,
 .nav-menu a:visited {
     position: relative;
+
     color: #dbe4ff;
+
     font-size: 14px;
     font-weight: 600;
+
     text-decoration: none;
-    transition: color 0.2s ease;
+
+    transition:
+        color 0.2s ease;
 }
 
 .nav-menu a:hover,
@@ -127,14 +161,21 @@ a {
 
 .nav-menu a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: -7px;
+
     width: 0;
     height: 2px;
+
     border-radius: 2px;
+
     background: #fff;
-    transition: width 0.2s ease;
+
+    transition:
+        width 0.2s ease;
 }
 
 .nav-menu a:hover::after,
@@ -143,21 +184,34 @@ a {
 }
 
 
-/* YouTube 페이지의 외부 채널 링크 */
+/* YouTube 외부 채널 링크 */
 
 .hero-channel-link,
 .hero-channel-link:visited {
     display: inline-flex;
+
     align-items: center;
-    margin-top: 16px;
+
+    margin-top: 18px;
+
     padding: 9px 13px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.24);
+
     border-radius: 9px;
-    background: rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
     color: #eef2ff;
+
     font-size: 13px;
     font-weight: 700;
+
     text-decoration: none;
+
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -165,10 +219,16 @@ a {
 }
 
 .hero-channel-link:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.4);
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    border-color:
+        rgba(255, 255, 255, 0.4);
+
     color: #fff;
-    transform: translateY(-1px);
+
+    transform:
+        translateY(-1px);
 }
 
 
@@ -186,11 +246,137 @@ a {
 
 .section-title h2 {
     margin: 4px 0 8px;
+
     font-size: 30px;
 }
 
 .section-title > p:last-child {
     margin: 0;
+
+    color: #667085;
+}
+
+
+/* =========================
+   CATEGORY NAVIGATION
+========================= */
+
+.category-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 58px;
+}
+
+.category-nav a,
+.category-nav a:visited {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 10px 15px;
+
+    border:
+        1px solid #e2e6ef;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #344054;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.03);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.category-nav a:hover {
+    background: #3457d5;
+    border-color: #3457d5;
+
+    color: #fff;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================
+   CONTENT CATEGORY
+========================= */
+
+.content-category {
+    padding: 8px 0 68px;
+
+    scroll-margin-top: 30px;
+}
+
+.content-category + .content-category {
+    padding-top: 54px;
+
+    border-top:
+        1px solid #e4e7ec;
+}
+
+.content-category-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 26px;
+}
+
+.content-category-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    background: #eef2ff;
+
+    font-size: 28px;
+}
+
+.content-category-header .eyebrow {
+    margin-bottom: 2px;
+}
+
+.content-category-header h2 {
+    margin: 0 0 4px;
+
+    font-size: 26px;
+
+    line-height: 1.35;
+}
+
+.content-category-header p:last-child {
+    max-width: 760px;
+
+    margin: 0;
+
     color: #667085;
 }
 
@@ -201,21 +387,38 @@ a {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
     gap: 20px;
-    padding: 22px 0 50px;
 }
 
 .card {
     display: block;
+
     min-width: 0;
+
     padding: 28px;
+
     background: #fff;
-    border: 1px solid #e5e7eb;
+
+    border:
+        1px solid #e5e7eb;
+
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.05);
+
     color: inherit;
+
     text-decoration: none;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
@@ -227,24 +430,35 @@ a {
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform:
+        translateY(-4px);
+
     border-color: #d7ddea;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 16px 32px
+        rgba(0, 0, 0, 0.08);
 }
 
 .card-icon {
     display: inline-block;
+
     font-size: 2rem;
+
     line-height: 1;
 }
 
-.card h2 {
+.card h3 {
     margin: 16px 0 8px;
+
     font-size: 21px;
+
+    line-height: 1.4;
 }
 
 .card p {
     margin: 0;
+
     color: #667085;
 }
 
@@ -259,15 +473,26 @@ a {
 
 .list a {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
+
     margin-bottom: 12px;
+
     padding: 20px 22px;
+
     background: #fff;
-    border: 1px solid #e5e7eb;
+
+    border:
+        1px solid #e5e7eb;
+
     border-radius: 14px;
+
     color: #172033;
+
     text-decoration: none;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
@@ -279,9 +504,14 @@ a {
 }
 
 .list a:hover {
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
+
     border-color: #d7ddea;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0, 0, 0, 0.05);
 }
 
 .list b {
@@ -295,17 +525,30 @@ a {
 
 .login {
     min-height: 100vh;
+
     display: grid;
+
     place-items: center;
+
     background: #f5f7fb;
 }
 
 .login-box {
-    width: min(420px, calc(100% - 32px));
+    width:
+        min(
+            420px,
+            calc(100% - 32px)
+        );
+
     padding: 32px;
+
     background: #fff;
+
     border-radius: 20px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.1);
 }
 
 .login-box h1 {
@@ -314,22 +557,35 @@ a {
 
 .login-box input {
     width: 100%;
-    padding: 14px;
+
     margin: 12px 0;
-    border: 1px solid #d0d5dd;
+
+    padding: 14px;
+
+    border:
+        1px solid #d0d5dd;
+
     border-radius: 10px;
+
     font: inherit;
 }
 
 .login-box button {
     width: 100%;
+
     padding: 14px;
+
     border: 0;
+
     border-radius: 10px;
+
     background: #3457d5;
+
     color: #fff;
+
     font: inherit;
     font-weight: 800;
+
     cursor: pointer;
 }
 
@@ -343,54 +599,79 @@ a {
 
 
 /* =========================
-   YOUTUBE PLAYLIST PAGE
+   YOUTUBE PLAYLIST
 ========================= */
 
 .youtube-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
     gap: 24px;
-    padding-bottom: 50px;
 }
 
 .youtube-playlist-card {
     min-width: 0;
+
     overflow: hidden;
+
     background: #fff;
-    border: 1px solid #e5e7eb;
+
+    border:
+        1px solid #e5e7eb;
+
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.05);
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
 .youtube-playlist-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 16px 32px
+        rgba(0, 0, 0, 0.08);
 }
 
 
-/* 16:9 영상 */
+/* 16:9 영상 비율 */
 
 .video-wrapper {
     position: relative;
+
     width: 100%;
+
     padding-bottom: 56.25%;
+
     overflow: hidden;
+
     background: #000;
 }
 
 .video-wrapper iframe {
     position: absolute;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     border: 0;
 }
 
 
-/* 영상 설명 */
+/* 영상 정보 */
 
 .youtube-content {
     padding: 24px;
@@ -398,22 +679,28 @@ a {
 
 .youtube-category {
     display: inline-block;
+
     margin-bottom: 8px;
+
     color: #3457d5;
+
     font-size: 12px;
     font-weight: 800;
+
     letter-spacing: 0.1em;
-    text-transform: uppercase;
 }
 
-.youtube-content h2 {
+.youtube-content h3 {
     margin: 4px 0 8px;
+
     font-size: 20px;
+
     line-height: 1.4;
 }
 
 .youtube-content p {
     margin: 0;
+
     color: #667085;
 }
 
@@ -423,16 +710,21 @@ a {
 ========================= */
 
 .footer {
-    margin-top: 80px;
+    margin-top: 70px;
+
     padding: 45px 0 25px;
+
     background: #111827;
+
     color: #fff;
 }
 
 .footer-inner {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
@@ -442,20 +734,26 @@ a {
 
 .footer-brand p {
     margin: 6px 0 0;
+
     color: #98a2b3;
+
     font-size: 14px;
 }
 
 .footer-links {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 24px;
 }
 
 .footer-links a,
 .footer-links a:visited {
     color: #d0d5dd;
+
     font-size: 14px;
+
     text-decoration: none;
 }
 
@@ -465,13 +763,19 @@ a {
 
 .footer-bottom {
     margin-top: 35px;
+
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
     margin: 0;
+
     color: #667085;
+
     font-size: 13px;
 }
 
@@ -484,7 +788,11 @@ a {
 
     .grid,
     .youtube-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
     }
 
 }
@@ -497,8 +805,13 @@ a {
 @media (max-width: 760px) {
 
     .wrap {
-        width: min(100% - 24px, 1080px);
+        width:
+            min(
+                calc(100% - 24px),
+                1080px
+            );
     }
+
 
     .hero {
         padding: 30px 0 52px;
@@ -508,33 +821,67 @@ a {
         padding: 28px 0 42px;
     }
 
+
     .top-nav {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 16px;
+
         padding-bottom: 26px;
     }
 
     .nav-menu {
         flex-wrap: wrap;
+
         gap: 20px;
     }
+
 
     .section {
         padding-top: 45px;
     }
+
+
+    .category-nav {
+        margin-bottom: 42px;
+    }
+
+
+    .content-category {
+        padding-bottom: 50px;
+    }
+
+    .content-category + .content-category {
+        padding-top: 40px;
+    }
+
+    .content-category-header {
+        align-items: flex-start;
+    }
+
+    .content-category-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+    .content-category-header h2 {
+        font-size: 23px;
+    }
+
 
     .grid,
     .youtube-grid {
         grid-template-columns: 1fr;
     }
 
-    .grid {
-        padding-top: 14px;
-    }
 
     .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
     }
 

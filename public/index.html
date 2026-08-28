@@ -1,250 +1,533 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IT핥기 LAB</title>
+    <title>IT핥기 LAB | 강의자료실</title>
 
     <link rel="stylesheet" href="/css/style.css">
-
-    <!-- favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 
 <body>
 
     <!-- =========================
-         HERO
+         HERO / HEADER
     ========================== -->
     <header class="hero">
         <div class="wrap">
+
             <div class="top-nav">
+
                 <a href="/" class="brand">
                     IT핥기 LAB
                 </a>
-                <nav class="nav-menu">
-                    <a href="/" class="active" aria-current="page">
+
+                <nav class="nav-menu" aria-label="주요 메뉴">
+
+                    <a
+                        href="/"
+                        class="active"
+                        aria-current="page"
+                    >
                         강의자료실
                     </a>
 
                     <a href="/youtube/">
                         YouTube 강의
                     </a>
+
                 </nav>
+
             </div>
 
+
             <div class="hero-content">
+
                 <p class="eyebrow">
                     CLASS RESOURCE HUB
                 </p>
+
                 <h1>
                     IT 강의 자료실
                 </h1>
+
                 <p>
-                    과목을 선택하면 해당 강의 자료실로 이동합니다.
+                    프로그래밍부터 클라우드, 데이터, 시스템, 보안까지
+                    수업 자료를 분야별로 정리했습니다.
                 </p>
+
             </div>
+
         </div>
     </header>
 
+
+    <!-- =========================
+         MAIN
+    ========================== -->
     <main class="wrap">
-        <!-- =========================
-             강의 자료
-        ========================== -->
+
         <section class="section">
+
             <div class="section-title">
+
                 <p class="eyebrow dark">
                     CLASS MATERIALS
                 </p>
-                <h2>강의 자료</h2>
+
+                <h2>
+                    강의 자료
+                </h2>
+
                 <p>
-                    수업 과목을 선택하면 해당 강의 자료실로 이동합니다.
+                    분야를 선택하거나 아래로 이동하여 원하는 과목을 찾아보세요.
                 </p>
+
             </div>
 
-            <div class="grid">
-                <!-- Cyber Security -->
-                <a class="card" href="/cyber/">
-                    <span class="card-icon">
-                        🔐
-                    </span>
-                    <h2>Cyber Security</h2>
-                    <p>
-                        네트워크, 시스템, 웹,
-                        클라우드 보안
-                    </p>
+
+            <!-- 카테고리 바로가기 -->
+            <nav class="category-nav" aria-label="강의 카테고리">
+
+                <a href="#cloud">
+                    ☁️ Cloud & DevOps
                 </a>
-                
-                <!-- AWS -->
-                <a class="card" href="/aws/">
-                    <span class="card-icon">
+
+                <a href="#programming">
+                    💻 Programming
+                </a>
+
+                <a href="#computer-science">
+                    🧩 Computer Science
+                </a>
+
+                <a href="#system-network">
+                    🖥️ System & Network
+                </a>
+
+                <a href="#data-ai">
+                    📊 Data & AI
+                </a>
+
+                <a href="#security">
+                    🔐 Security
+                </a>
+
+            </nav>
+
+
+            <!-- =========================
+                 CLOUD & DEVOPS
+            ========================== -->
+            <section
+                id="cloud"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
                         ☁️
                     </span>
-                    <h2>AWS Cloud</h2>
-                    <p>
-                        VPC, EC2, RDS, ALB,
-                        CloudFront
-                    </p>
-                </a>
 
-                <!-- Kubernetes -->
-                <a class="card" href="/kubernetes/">
-                    <span class="card-icon">
-                        🐳
+                    <div>
+
+                        <p class="eyebrow dark">
+                            CLOUD & DEVOPS
+                        </p>
+
+                        <h2>
+                            클라우드 · 컨테이너
+                        </h2>
+
+                        <p>
+                            AWS, Docker, Kubernetes 기반 클라우드 인프라와
+                            운영 환경을 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid">
+
+                    <a class="card" href="/aws/">
+                        <span class="card-icon">☁️</span>
+                        <h3>AWS Cloud</h3>
+                        <p>VPC, EC2, RDS, ALB, CloudFront</p>
+                    </a>
+
+                    <a class="card" href="/docker/">
+                        <span class="card-icon">🐳</span>
+                        <h3>Docker</h3>
+                        <p>도커 컨테이너 개념과 기초 사용법</p>
+                    </a>
+
+                    <a class="card" href="/kubernetes/">
+                        <span class="card-icon">☸️</span>
+                        <h3>Kubernetes</h3>
+                        <p>Docker, Kubernetes, GitOps</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PROGRAMMING
+            ========================== -->
+            <section
+                id="programming"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        💻
                     </span>
-                    <h2>Kubernetes</h2>
-                    <p>
-                        Docker, Kubernetes,
-                        GitOps
-                    </p>
-                </a>
 
-                <a class="card" href="/docker/">
-                    <span class="card-icon">🐳</span>
-                    <h2>Docker</h2>
-                    <p>도커 컨테이너 개념과 기초 사용법</p>
-                </a>
+                    <div>
 
-                <a class="card" href="/c/">
-                    <span class="card-icon">🔧</span>
-                    <h2>C</h2>
-                    <p>C언어 기초 문법</p>
-                </a>
+                        <p class="eyebrow dark">
+                            PROGRAMMING
+                        </p>
 
-                <a class="card" href="/cpp/">
-                    <span class="card-icon">⚙️</span>
-                    <h2>C++</h2>
-                    <p>C++ 기초 문법</p>
-                </a>
+                        <h2>
+                            프로그래밍 · 웹 개발
+                        </h2>
 
-                <a class="card" href="/java/">
-                    <span class="card-icon">☕</span>
-                    <h2>Java</h2>
-                    <p>Java 기초 문법</p>
-                </a>
+                        <p>
+                            프로그래밍 언어의 기초부터 웹 프레임워크를 활용한
+                            애플리케이션 개발까지 학습합니다.
+                        </p>
 
-                <a class="card" href="/jsp/">
-                    <span class="card-icon">🌐</span>
-                    <h2>JSP</h2>
-                    <p>JSP 기초 문법</p>
-                </a>
+                    </div>
 
-                <a class="card" href="/spring/">
-                    <span class="card-icon">🌱</span>
-                    <h2>Spring Framework</h2>
-                    <p>Spring Framework 기본</p>
-                </a>
+                </div>
 
-                <a class="card" href="/springboot/">
-                    <span class="card-icon">🚀</span>
-                    <h2>SpringBoot</h2>
-                    <p>SpringBoot 사용법</p>
-                </a>
 
-                <a class="card" href="/python/">
-                    <span class="card-icon">🐍</span>
-                    <h2>Python</h2>
-                    <p>Python 기초 문법</p>
-                </a>
+                <div class="grid">
 
-                <a class="card" href="/django/">
-                    <span class="card-icon">🕸️</span>
-                    <h2>Django</h2>
-                    <p>Django 기초 문법</p>
-                </a>
+                    <a class="card" href="/c/">
+                        <span class="card-icon">🔧</span>
+                        <h3>C</h3>
+                        <p>C언어 기초 문법</p>
+                    </a>
 
-                <a class="card" href="/data-structure/">
-                    <span class="card-icon">🌳</span>
-                    <h2>자료구조</h2>
-                    <p>자료구조 기초(C언어 기반)</p>
-                </a>
+                    <a class="card" href="/cpp/">
+                        <span class="card-icon">⚙️</span>
+                        <h3>C++</h3>
+                        <p>C++ 기초 문법</p>
+                    </a>
 
-                <a class="card" href="/algo/">
-                    <span class="card-icon">🧩</span>
-                    <h2>알고리즘</h2>
-                    <p>알고리즘 기초</p>
-                </a>
+                    <a class="card" href="/java/">
+                        <span class="card-icon">☕</span>
+                        <h3>Java</h3>
+                        <p>Java 기초 문법</p>
+                    </a>
 
-                <a class="card" href="/network/">
-                    <span class="card-icon">🌐</span>
-                    <h2>Network 기초</h2>
-                    <p>Network 기초 지식</p>
-                </a>
+                    <a class="card" href="/jsp/">
+                        <span class="card-icon">🌐</span>
+                        <h3>JSP</h3>
+                        <p>JSP 기반 웹 애플리케이션 개발</p>
+                    </a>
 
-                <a class="card" href="/linux1/">
-                    <span class="card-icon">🐧</span>
-                    <h2>Linux 기초</h2>
-                    <p>Linux 기초(Ubuntu 활용)</p>
-                </a>
+                    <a class="card" href="/spring/">
+                        <span class="card-icon">🌱</span>
+                        <h3>Spring Framework</h3>
+                        <p>Spring Framework 기본 개념과 활용</p>
+                    </a>
 
-                <a class="card" href="/linux2/">
-                    <span class="card-icon">🖥️</span>
-                    <h2>Linux 서버</h2>
-                    <p>Linux에서 다양한 서버 구축 방법</p>
-                </a>
+                    <a class="card" href="/springboot/">
+                        <span class="card-icon">🚀</span>
+                        <h3>Spring Boot</h3>
+                        <p>Spring Boot 기반 애플리케이션 개발</p>
+                    </a>
 
-                <a class="card" href="/winsrv/">
-                    <span class="card-icon">🪟</span>
-                    <h2>Windows Server</h2>
-                    <p>Windows Server 구축 방법(Windows Server 2022 기반)</p>
-                </a>
+                    <a class="card" href="/python/">
+                        <span class="card-icon">🐍</span>
+                        <h3>Python</h3>
+                        <p>Python 기초 문법</p>
+                    </a>
 
-                <a class="card" href="/sql1/">
-                    <span class="card-icon">🗃️</span>
-                    <h2>SQL 기초</h2>
-                    <p>SQL 기초(Oracle)</p>
-                </a>
+                    <a class="card" href="/django/">
+                        <span class="card-icon">🕸️</span>
+                        <h3>Django</h3>
+                        <p>Django 웹 애플리케이션 개발</p>
+                    </a>
 
-                <a class="card" href="/sql2/">
-                    <span class="card-icon">🧮</span>
-                    <h2>SQL 응용</h2>
-                    <p>SQL 고급 기능들(Oracle)</p>
-                </a>
+                </div>
 
-                <a class="card" href="/da/">
-                    <span class="card-icon">📊</span>
-                    <h2>데이터분석 기초</h2>
-                    <p>데이터분석 기초 개념과 도구 사용법</p>
-                </a>
+            </section>
 
-                <a class="card" href="/ml/">
-                    <span class="card-icon">🤖</span>
-                    <h2>머신러닝</h2>
-                    <p>Machine Learning 기초 개념 및 실습</p>
-                </a>
 
-                <a class="card" href="/dl/">
-                    <span class="card-icon">🧠</span>
-                    <h2>인공신경망과 딥러닝</h2>
-                    <p>인공 신경망 개념과 Deep Learning 실습</p>
-                </a>
+            <!-- =========================
+                 COMPUTER SCIENCE
+            ========================== -->
+            <section
+                id="computer-science"
+                class="content-category"
+            >
 
-                <a class="card" href="/rev/">
-                    <span class="card-icon">🔬</span>
-                    <h2>Reverse Engineering</h2>
-                    <p>역공학 개념과 실습(C & Assembly Language)</p>
-                </a>
+                <div class="content-category-header">
 
-                <a class="card" href="/fb/">
-                    <span class="card-icon">🔍</span>
-                    <h2>Forensic Basic</h2>
-                    <p>사이버 포렌식 기초 개념과 실습</p>
-                </a>
+                    <span class="content-category-icon">
+                        🧩
+                    </span>
 
-                <a class="card" href="/ws/">
-                    <span class="card-icon">🛡️</span>
-                    <h2>Web Security</h2>
-                    <p>웹 보안 기초와 실습</p>
-                </a>
+                    <div>
 
-                <a class="card" href="/ma/">
-                    <span class="card-icon">🦠</span>
-                    <h2>악성코드 분석</h2>
-                    <p>악성코드 기초 및 분석 기법</p>
-                </a>
-            </div>
+                        <p class="eyebrow dark">
+                            COMPUTER SCIENCE
+                        </p>
+
+                        <h2>
+                            컴퓨터 과학 기초
+                        </h2>
+
+                        <p>
+                            프로그램의 구조와 문제 해결 능력을 위한
+                            핵심 컴퓨터 과학 개념을 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid">
+
+                    <a class="card" href="/data-structure/">
+                        <span class="card-icon">🌳</span>
+                        <h3>자료구조</h3>
+                        <p>자료구조 기초(C언어 기반)</p>
+                    </a>
+
+                    <a class="card" href="/algo/">
+                        <span class="card-icon">🧩</span>
+                        <h3>알고리즘</h3>
+                        <p>알고리즘 기초와 문제 해결 방법</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SYSTEM & NETWORK
+            ========================== -->
+            <section
+                id="system-network"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        🖥️
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            SYSTEM & NETWORK
+                        </p>
+
+                        <h2>
+                            시스템 · 네트워크
+                        </h2>
+
+                        <p>
+                            네트워크 통신과 Linux, Windows Server 운영에 필요한
+                            시스템 관리 기초를 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid">
+
+                    <a class="card" href="/network/">
+                        <span class="card-icon">🌐</span>
+                        <h3>Network 기초</h3>
+                        <p>Network 기초 지식과 통신 구조</p>
+                    </a>
+
+                    <a class="card" href="/linux1/">
+                        <span class="card-icon">🐧</span>
+                        <h3>Linux 기초</h3>
+                        <p>Linux 기초(Ubuntu 활용)</p>
+                    </a>
+
+                    <a class="card" href="/linux2/">
+                        <span class="card-icon">🖥️</span>
+                        <h3>Linux 서버</h3>
+                        <p>Linux에서 다양한 서버 구축 방법</p>
+                    </a>
+
+                    <a class="card" href="/winsrv/">
+                        <span class="card-icon">🪟</span>
+                        <h3>Windows Server</h3>
+                        <p>Windows Server 2022 기반 서버 구축</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 DATA & AI
+            ========================== -->
+            <section
+                id="data-ai"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        📊
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            DATA & AI
+                        </p>
+
+                        <h2>
+                            데이터 · 인공지능
+                        </h2>
+
+                        <p>
+                            SQL과 데이터 분석을 시작으로 머신러닝과
+                            딥러닝까지 단계적으로 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid">
+
+                    <a class="card" href="/sql1/">
+                        <span class="card-icon">🗃️</span>
+                        <h3>SQL 기초</h3>
+                        <p>SQL 기초(Oracle)</p>
+                    </a>
+
+                    <a class="card" href="/sql2/">
+                        <span class="card-icon">🧮</span>
+                        <h3>SQL 응용</h3>
+                        <p>SQL 고급 기능(Oracle)</p>
+                    </a>
+
+                    <a class="card" href="/da/">
+                        <span class="card-icon">📊</span>
+                        <h3>데이터분석 기초</h3>
+                        <p>데이터분석 기초 개념과 도구 사용법</p>
+                    </a>
+
+                    <a class="card" href="/ml/">
+                        <span class="card-icon">🤖</span>
+                        <h3>머신러닝</h3>
+                        <p>Machine Learning 기초 개념 및 실습</p>
+                    </a>
+
+                    <a class="card" href="/dl/">
+                        <span class="card-icon">🧠</span>
+                        <h3>인공신경망과 딥러닝</h3>
+                        <p>인공신경망 개념과 Deep Learning 실습</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SECURITY
+            ========================== -->
+            <section
+                id="security"
+                class="content-category"
+            >
+
+                <div class="content-category-header">
+
+                    <span class="content-category-icon">
+                        🔐
+                    </span>
+
+                    <div>
+
+                        <p class="eyebrow dark">
+                            CYBER SECURITY
+                        </p>
+
+                        <h2>
+                            사이버 보안
+                        </h2>
+
+                        <p>
+                            네트워크와 시스템 보안부터 웹 취약점,
+                            포렌식, 리버싱, 악성코드 분석까지 학습합니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid">
+
+                    <a class="card" href="/cyber/">
+                        <span class="card-icon">🔐</span>
+                        <h3>Cyber Security</h3>
+                        <p>네트워크, 시스템, 웹, 클라우드 보안</p>
+                    </a>
+
+                    <a class="card" href="/ws/">
+                        <span class="card-icon">🛡️</span>
+                        <h3>Web Security</h3>
+                        <p>웹 보안 기초와 취약점 실습</p>
+                    </a>
+
+                    <a class="card" href="/rev/">
+                        <span class="card-icon">🔬</span>
+                        <h3>Reverse Engineering</h3>
+                        <p>역공학 개념과 실습(C & Assembly Language)</p>
+                    </a>
+
+                    <a class="card" href="/fb/">
+                        <span class="card-icon">🔍</span>
+                        <h3>Forensic Basic</h3>
+                        <p>사이버 포렌식 기초 개념과 실습</p>
+                    </a>
+
+                    <a class="card" href="/ma/">
+                        <span class="card-icon">🦠</span>
+                        <h3>악성코드 분석</h3>
+                        <p>악성코드 기초 및 분석 기법</p>
+                    </a>
+
+                </div>
+
+            </section>
+
         </section>
+
     </main>
 
 
@@ -252,37 +535,55 @@
          FOOTER
     ========================== -->
     <footer class="footer">
+
         <div class="wrap footer-inner">
+
             <div class="footer-brand">
+
                 <strong>
                     IT핥기 LAB
                 </strong>
+
                 <p>
                     IT · Cloud · AI · Security Education
                 </p>
+
             </div>
 
+
             <div class="footer-links">
+
                 <a href="/">
-                    Home
+                    강의자료실
                 </a>
+
+                <a href="/youtube/">
+                    YouTube 강의
+                </a>
+
                 <a
-                    href="https://www.youtube.com/@it핥기"
+                    href="https://www.youtube.com/@ithotgi"
                     target="_blank"
                     rel="noopener"
                 >
-                    YouTube
+                    YouTube 채널
                 </a>
+
             </div>
+
         </div>
 
+
         <div class="wrap footer-bottom">
+
             <p>
-                © 2026 IT핥기 LAB.
-                All rights reserved.
+                © 2026 IT핥기 LAB. All rights reserved.
             </p>
+
         </div>
+
     </footer>
 
 </body>
+
 </html>
