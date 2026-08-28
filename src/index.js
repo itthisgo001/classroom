@@ -210,9 +210,27 @@ export default {
     // 정적 파일 그대로 반환
     if (!course) {
 
-      return env.ASSETS.fetch(request);
+    const response =
+        await env.ASSETS.fetch(request);
+
+    if (response.status === 404) {
+
+        return new Response(
+            notFoundPage(url.pathname),
+            {
+                status: 404,
+
+                headers: {
+                    "Content-Type":
+                        "text/html; charset=UTF-8"
+                }
+            }
+        );
 
     }
+
+    return response;
+}
 
     const secretName =
       PROTECTED[course];
@@ -238,15 +256,33 @@ export default {
 
     // 이미 인증된 경우
     if (
-      await validCookie(
-        request,
-        course,
-        password
-      )
+        await validCookie(
+            request,
+            course,
+            password
+        )
     ) {
 
-      return env.ASSETS.fetch(request);
+        const response =
+            await env.ASSETS.fetch(request);
 
+        if (response.status === 404) {
+
+            return new Response(
+                notFoundPage(url.pathname),
+                {
+                    status: 404,
+
+                    headers: {
+                        "Content-Type":
+                            "text/html; charset=UTF-8"
+                    }
+                }
+            );
+
+        }
+
+        return response;
     }
 
     // 로그인 처리
@@ -489,6 +525,170 @@ function unavailablePage(course) {
 
         <div class="course">
             ${course}
+        </div>
+
+        <a href="/">
+            ← 전체 자료실로 돌아가기
+        </a>
+
+    </main>
+
+</body>
+</html>
+`;
+}
+
+function notFoundPage(pathname) {
+    return `
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>페이지 준비 중</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family:
+                Pretendard,
+                "Noto Sans KR",
+                "Malgun Gothic",
+                sans-serif;
+
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        .box {
+            width: min(
+                480px,
+                calc(100% - 32px)
+            );
+
+            padding: 40px;
+
+            background: #fff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 18px 45px
+                rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+        }
+
+        .icon {
+            width: 72px;
+            height: 72px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: #eef2ff;
+
+            font-size: 34px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+
+            font-size: 26px;
+        }
+
+        p {
+            margin: 6px 0;
+
+            color: #667085;
+
+            line-height: 1.7;
+        }
+
+        .path {
+            margin-top: 20px;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            background: #f5f7fb;
+
+            color: #3457d5;
+
+            font-weight: 700;
+
+            word-break: break-all;
+        }
+
+        a {
+            display: inline-block;
+
+            margin-top: 28px;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            background: #3457d5;
+
+            color: #fff;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #2848bc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="box">
+
+        <div class="icon">
+            🚧
+        </div>
+
+        <h1>
+            아직 준비 중인 페이지입니다
+        </h1>
+
+        <p>
+            해당 과목 페이지는 아직 생성되지 않았습니다.
+        </p>
+
+        <p>
+            자료가 준비되면 순차적으로 공개됩니다.
+        </p>
+
+        <div class="path">
+            ${pathname}
         </div>
 
         <a href="/">
