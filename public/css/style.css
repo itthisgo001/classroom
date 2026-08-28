@@ -495,3 +495,75 @@ body {
         flex-wrap: wrap;
     }
 }
+
+.youtube-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.youtube-playlist-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+/* 16:9 영상 비율 */
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 900px) {
+
+    .youtube-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .youtube-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
